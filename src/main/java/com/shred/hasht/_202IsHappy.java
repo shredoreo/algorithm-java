@@ -1,5 +1,6 @@
 package com.shred.hasht;
 
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class _202IsHappy {
@@ -38,5 +39,13 @@ public class _202IsHappy {
     public static void main(String[] args) {
         boolean happy = new Solution().isHappy(19);
         System.out.println(happy);
+
+        HashMap<String, String> ma = new HashMap<>();
+        String aaa = "aaa";
+         ma.put(aaa,"nnn");
+        String compute = ma.compute(aaa, (k, v) -> v == null ? "000" : "cccc");
+        System.out.println(compute);
+        String s = ma.get(aaa);
+        System.out.println(s);
     }
 }
