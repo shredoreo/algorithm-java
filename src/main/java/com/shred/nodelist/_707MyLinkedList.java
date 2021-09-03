@@ -76,7 +76,7 @@ public class _707MyLinkedList {
 
         /** Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. */
         public void addAtHead(int val) {
-
+            addAtIndex(0, val);
         }
 
         /** Append a node of value val to the last element of the linked list. */
@@ -90,10 +90,16 @@ public class _707MyLinkedList {
                 return;
             }
             size++;
+            Node cur = new Node(val, null);
             if (index==0){
-                int i = get(index);
+                Node next = head.next;
+                head.next = cur;
+                cur.next = next;
+            } else {
+                Node prev = getNode(index-1);
+                cur.next = prev.next;
+                prev.next= cur;
             }
-
 
         }
 
