@@ -39,13 +39,15 @@ public class _637_AverageOfLevels {
         private ArrayList<Double> bfsForAverage(TreeNode root) {
             ArrayList<Double> result = new ArrayList<>();
 
-            if (root == null){
+   /*         if (root == null){
                 return result;
             }
-
+*/
             Deque<TreeNode> queue = new LinkedList<>();
 
-            queue.offer(root);
+            if (root!=null){
+                queue.offer(root);
+            }
 
             while (!queue.isEmpty()){
                 int levelSize = queue.size();
