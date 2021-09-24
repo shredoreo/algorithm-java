@@ -65,6 +65,8 @@ public class _40_CombinationSum2 {
             // 在for循环这里剪枝  candidates[i]+sum<=target
             for (int i = index; i < candidates.length && candidates[i] + sum <= target; i++) {
                 //数组排序的情况下，判断当前数值 是否在同一层被使用过了
+                // 同一层被用过，就直接跳过，
+                // 因为同一层的上一条树枝，已经使用过了相同的组合
                 if (i > 0 && candidates[i] == candidates[i - 1] && !flag[i - 1]) {
                     continue;
                 }
