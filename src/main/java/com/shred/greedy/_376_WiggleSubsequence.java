@@ -50,6 +50,7 @@ public class _376_WiggleSubsequence {
             for (int i = 1; i < nums.length; i++) {
                 cur = nums[i] - nums[i - 1];
 
+                // prev == 0 是初始值
                 if (cur > 0 && prev <= 0
                         || cur < 0 && prev >= 0) {
                     count++;
