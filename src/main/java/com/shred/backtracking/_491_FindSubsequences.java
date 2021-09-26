@@ -28,7 +28,7 @@ public class _491_FindSubsequences {
     class Solution {
         public List<List<Integer>> findSubsequences(int[] nums) {
 
-
+return null;
         }
     }
 }
